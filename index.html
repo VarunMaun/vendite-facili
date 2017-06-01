@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digital Enterprise Sales</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Library CSS -->
+<link href="resources/css/ratchet.min.css" rel="stylesheet" />
+<link href="resources/css/ratchet-theme-ios.css" rel="stylesheet" />
+<link href="resources/css/snap.css" rel="stylesheet" />
+<link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+
+<!-- App CSS -->
+<link href="resources/css/app-layout.css" rel="stylesheet" />
+
+<!-- Library JS -->
+<script src="resources/js/jquery-3.2.1.min.js"></script>
+<script src="resources/js/ratchet.min.js"></script>
+<script src="resources/js/snap.min.js"></script>
+<script src="resources/js/fingerblast.js"></script>
+<!-- App JS -->
+<script src="resources/js/app-init.js"></script>
+
+
+<style type="text/css">
+.snap-drawers .list {
+	margin: 0;
+}
+</style>
+</head>
+<body>
+
+	<div class="snap-drawers">
+		<div class="snap-drawer snap-drawer-left" id="left-drawer">
+			<h2>Quick Nav</h2>
+			<ul>
+				<li><a>Home</a></li>
+				<li><a>Action Items</a></li>
+				<li><a>Quotes</a></li>
+				<li><a>Invoices</a></li>
+				<li><a>Customers</a></li>
+				<li><a>Products</a></li>
+				<li><a>Notifications</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="content" class="snap-content">
+		<header class="bar bar-nav">
+			<a class="icon icon-bars pull-left" id="toggle-left"></a>
+			<div class="title"><img src="resources/css/img/logo.png" /></div> 
+			<a href="#menu-create-item" class="icon icon-plus pull-right"></a>
+		</header>
+
+		<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+		<div class="content">
+
+
+			<nav class="bar bar-tab">
+
+				<a class="tab-item active" href="#">
+					<span
+					class="icon fa fa-list"></span> <span class="tab-label">Tasks</span>
+				</a> <a class="tab-item" href="#"> <span class="icon fa fa-star"></span>
+					<span class="tab-label">Favorites</span>
+				</a> <a class="tab-item" href="#"> <span
+					class="icon fa fa-address-book"></span> <span class="tab-label">Contacts</span>
+				</a> <a class="tab-item" href="#">
+					<div class="badge badge-negative badge-filled">3</div> <span
+					class="icon fa fa-envelope"></span> <span class="tab-label">Notifications</span>
+				</a>
+			</nav>
+
+		</div>
+	</div>
+
+
+	<div id="menu-create-item" class="modal">
+		<header class="bar bar-nav">
+			<a class="icon icon-close pull-right" href="#menu-create-item"></a>
+			<h1 class="title">CREATE</h1>
+		</header>
+
+		<div class="content">
+
+			<h5 class="content-padded">Quote:</h5>
+
+
+			<ul class="table-view">
+				<li class="table-view-cell"><a class="navigate-right"><span
+						class="media-object pull-left icon fa fa-bolt"  style="background: #ffcc00"></span>
+					<div class="media-body">Express</div></a></li>
+				<li class="table-view-cell"><a class="navigate-right"><span
+						class="media-object pull-left icon fa fa-shopping-cart"  style="background: #4cd964" ></span>
+					<div class="media-body">New Customer</div></a></li>
+				<li class="table-view-cell"><a class="navigate-right"><span
+						class="media-object pull-left icon fa fa-shopping-cart"  style="background: #18A68D"></span>
+					<div class="media-body">Existing Customer</div></a></li>
+			</ul>
+			<h5 class="content-padded">Misc:</h5>
+			<ul class="table-view">
+
+				<li class="table-view-cell"><a class="navigate-right"><span
+						class="media-object pull-left icon fa fa-address-book-o "  style="background: #34aadc" ></span>
+					<div class="media-body">Contact</div></a></li>
+				<li class="table-view-cell"><a class="navigate-right"><span
+						class="media-object pull-left icon fa fa-building-o"  style="background:#8F40AF "></span>
+					<div class="media-body">Customer</div></a></li>
+				<li class="table-view-cell"><a class="navigate-right"><span
+						class="media-object pull-left icon fa fa-calendar" style="background: #ff2d55"></span>
+					<div class="media-body">Reminder</div></a></li>
+			</ul>
+
+		</div>
+	</div>
+
+
+
+
+</body>
+</html>
