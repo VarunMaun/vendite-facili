@@ -22,6 +22,8 @@
 <script src="resources/js/ratchet.min.js"></script>
 <script src="resources/js/snap.min.js"></script>
 <script src="resources/js/fingerblast.js"></script>
+<script src="resources/js/pouchdb-6.2.0.min.js"></script>
+
 <!-- App JS -->
 <script src="resources/js/app-init.js"></script>
 
@@ -52,8 +54,10 @@
 	<div id="content" class="snap-content">
 		<header class="bar bar-nav">
 			<a class="icon icon-bars pull-left" id="toggle-left"></a>
+			<a href="#menu-create-item" class="icon icon-plus pull-left" style="margin-left:15px;"></a>
 			<div class="title"><img src="resources/css/img/logo.png" /></div> 
-			<a href="#menu-create-item" class="icon icon-plus pull-right"></a>
+			<a href="#menu-shopping-cart" class="icon fa fa-shopping-cart pull-right" style="font-size:24px !important"></a>
+			
 		</header>
 
 		<!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
@@ -118,8 +122,36 @@
 		</div>
 	</div>
 
+<div id="menu-shopping-cart" class="modal">
 
+<header class="bar bar-nav">
+			<a class="icon icon-close pull-right" href="#menu-shopping-cart"></a>
+			<h1 class="title">SHOPPING CART</h1>
+			<a class="icon icon-more-vertical pull-left" ></a>
+			
+		</header>
+		
+				<div class="content">
 
+			<h5 class="content-padded">Items for Quote:1-343242</h5>
+
+<ul class="table-view">
+
+				<li class="table-view-cell"><a class=""><span
+						class="media-object pull-left icon fa fa-address-book-o "  style="background: #34aadc" ></span>
+					<div class="media-body">Contact</div></a></li>
+				<li class="table-view-cell"><a class=""><span
+						class="media-object pull-left icon fa fa-building-o"  style="background:#8F40AF "></span>
+					<div class="media-body">Customer</div></a></li>
+				<li class="table-view-cell"><a class=""><span
+						class="media-object pull-left icon fa fa-calendar" style="background: #ff2d55"></span>
+					<div class="media-body">Reminder</div></a></li>
+			</ul>
+
+			
+		</div>
+		
+</div>
 
 </body>
 </html>
