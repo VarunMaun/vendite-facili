@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Digital Enterprise Sales</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Library CSS -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+<link href="resources/css/materialize.min.css" rel="stylesheet" />
+<link href="resources/css/style.css" rel="stylesheet" />
+<!-- App CSS -->
+<link href="resources/css/app-layout.css" rel="stylesheet" />
+
+<!-- Library JS -->
+<script src="resources/js/jquery-3.2.1.min.js"></script>
+<script src="resources/js/materialize.min.js"></script>
+<script src="resources/js/pouchdb-6.2.0.min.js"></script>
+
+
+<!-- App JS -->
+<script src="resources/js/app-init.js"></script>
+
+
+</head>
+<body>
+
+
+ <nav class="cyan"role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">DES</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="home.html"><i class="fa fa-home left"></i> Home</a></li>
+        <li><a href="worklist.html"><i class="fa fa-list left"></i>Worklist</a></lir>
+        <li><a href="products.html"><i class="fa fa-shopping-basket left"></i>Products</a></li>        
+        <li><a href="chat.html"><i class="fa fa-comments left"></i>Chat</a></li>
+        <li><a href="my-favorites.html"><i class="fa fa-star left"></i>Favorites</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="home.html"><i class="fa fa-home left"></i> Home</a></li>
+        <li><a href="worklist.html"><i class="fa fa-list left"></i>Worklist</a></lir>
+        <li><a href="products.html"><i class="fa fa-shopping-basket left"></i>Products</a></li>        
+        <li><a href="chat.html"><i class="fa fa-comments left"></i>Chat</a></li>
+        <li><a href="my-favorites.html"><i class="fa fa-star left"></i>Favorites</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+<div class="container">
+Favourites
+</div>
+
+<div id="include-html"></div>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	$(".button-collapse").sideNav();
+	
+})
+
+</script>
+
+
+</body>
+</html>

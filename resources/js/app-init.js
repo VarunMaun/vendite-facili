@@ -1,45 +1,19 @@
-var initDrawer = function(){
-	
-	var snapper = new Snap({
-		element: document.getElementById('content'),
-        disable: 'right'
-	});
-	
-	UpdateDrawers = function(){
-		var state = snapper.state(),
-			towards = state.info.towards,
-			opening = state.info.opening;
-		if(opening=='right' && towards=='left'){
-		//	$('#left-drawer').removeClass('active-drawer');
-		} else if(opening=='left' && towards=='right') {
-			$('#left-drawer').addClass('active-drawer');
-		}
-	};
-	
-	snapper.on('drag', UpdateDrawers);
-	snapper.on('animating', UpdateDrawers);
-	snapper.on('animated', UpdateDrawers);
-	
-	
-	$('#toggle-left').on('click', function(){
-		snapper.open('left');
-	});
-	
-	
-};
+var moduleMap = {
+		"side-nav":"left-menu.html"
+}
 
-var initDesktop = function(){
-	window.addEventListener('touchstart', function () { isScrolling = false; });
-	  window.addEventListener('touchmove', function () { isScrolling = true; });
-	  window.addEventListener('touchend', touchend);
-	  window.addEventListener('click', /*function (e) { if (getTarget(e)) {e.preventDefault();} }*/ touchend); ///<--
-	  window.addEventListener('popstate', popstate);
-	  window.PUSH = PUSH;
 
+
+
+function loadModules(moduleList,$wrap){
+	jQuery.ajaxSetup({ async: false });
+	for(var iter=0;iter<moduleList.length;iter++) {
+		$.get(  'common/'+ moduleMap [  moduleList[iter] ], '', function (data) { $wrap.append(data); });
+	}
+	jQuery.ajaxSetup({ async: true });
 }
 
 
 $(document).ready(function(){
-	initDrawer();
 	
 });
