@@ -269,14 +269,14 @@ color: #fff;
 .product-card .product-ref-no{
 	position:absolute;
 	top:0px;
-	left:100px;
+	left:90px;
 	
 }
 
 .product-card .product-title{
 	position:absolute;
 	top:20px;
-	left:100px;
+	left:90px;
 	color:#005a9a;
 	font-weight:bold;
 	font-size:18px;	
@@ -331,4 +331,60 @@ color: #fff;
 .add-btn.selected{
 	background: rgb(0,176,80);
 	color:#fff;
+}
+
+
+
+.icon-config-stage{
+	margin:auto;border-radius:50%;height:100px;width:100px; background:#fff url('img/icons/tools-and-utensils.png') no-repeat center center;background-size: 60%;
+}
+
+.icon-price-stage{
+	margin:auto;border-radius:50%;height:100px;width:100px; background:#fff url('img/icons/price-tag.png') no-repeat center center;background-size: 60%;
+}
+
+.icon-quote-stage{
+	margin:auto;border-radius:50%;height:100px;width:100px; background:#fff url('img/icons/diploma.png') no-repeat center center;background-size: 60%;
+}
+
+@media screen and (max-width:600px) {
+
+	.home-card-pipeline-stage{
+text-align:left;	
+	height:80px;
+box-shadow: 0px 1px 0px #ffe189;
+	}
+	
+	
+	
+.icon-config-stage,.icon-price-stage,.icon-quote-stage{
+	display: inline-block;
+vertical-align: middle;
+height: 50px;
+width: 50px;
+
+}
+.home-card-pipeline-stage h6{
+	display: inline-block !important;
+line-height: 50px !important;
+padding: 0px !important;
+margin: 0px !important;
+margin-left: 10px !important;
+
+}
+
+.home-card-pipeline-stage > span.number{
+	
+display: inline-block;
+line-height: 40px;
+margin-left: 10px;
+float:right;
+}
+
+.product-card .product-price{
+display: inline-block;
+float: right;
+margin-right: 10px;
+}
+
 }
