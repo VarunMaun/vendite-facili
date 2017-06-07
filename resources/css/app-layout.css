@@ -4,3 +4,130 @@ html,body{
 	 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+body{
+	background: #fafafa;
+}
+
+
+.row{
+	margin-bottom:5px !important;
+}
+
+.card .card-content{
+	padding:5px;
+}
+
+
+.brand-logo img{
+	height: 50px;
+    margin: 4px;	
+}
+
+
+#create-item-modal a{
+	display:block;
+	text-align: center;	
+	padding:10px;
+	
+}
+
+#create-item-modal a img{
+	width:40px;height:auto;
+	display:block;
+	margin:auto;
+	margin-bottom:10px;
+}
+
+#create-item-modal a span{
+	font-size:14px;
+	color:#222 ;
+	text-transform:uppercase;
+}
+
+.home-tabs .tab a{
+	color:#555 !important;
+}
+
+.home-tabs .indicator{
+	background: #aaa !important;
+}
+
+.pipeline-summary-card{
+	padding:0px !important;
+}
+
+.pipeline-card {
+	padding:5px;
+	border:1px solid #f1f1f1;
+}
+
+.pipeline-card .circle-arc{
+	display:inline-block;
+	position: relative;
+	margin:0px 20px;   
+    border-radius: 50%;
+	height:66px;width:66px;   
+     -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg); /* Standard syntax */
+}
+
+
+
+.pipeline-card .circle-arc.stage1{
+	border: 8px solid #f1f1f1;
+    border-top-color: #fdd835 ;
+}
+
+.pipeline-card .circle-arc.stage2{
+	border: 8px solid #f1f1f1;
+    border-top-color: #039be5 ;
+    border-right-color: #039be5 ;
+}
+
+.pipeline-card .circle-arc.stage3{
+	border: 8px solid #f1f1f1;
+    border-top-color: #8bc34a;
+    border-right-color: #8bc34a;
+    border-bottom-color: #8bc34a;
+}
+
+
+.pipeline-card .circle-arc span{	
+	display:block;
+	    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    text-align: center;
+	 -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Safari */
+    transform: rotate(-45deg); /* Standard syntax */
+}
+
+
+.pipeline-card .title-wrap{
+	display:inline-block;color: #444;font-size:16px;width:90px;
+}
+.pipeline-card h6{
+	display:inline-block;
+	word-wrap:break-word;
+	
+}
+
+
+
+.list-item-right-arrow{
+	    float: right;
+    margin: 16px;
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: #f1f1f1;
+    color: #444;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+
+
