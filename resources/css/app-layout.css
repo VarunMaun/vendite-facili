@@ -13,10 +13,42 @@ body{
 	margin-bottom:5px !important;
 }
 
-
+h1, h2, h3, h4, h5, h6 {
+	color:#555;
+}
 
 .card .card-header ,.card .card-action {
 	    padding: 10px !important;
+}
+
+.card-action-home{
+	border-radius: 0 0 2px 2px;
+	padding: 10px !important;
+	position: relative;
+    background-color: inherit;    
+}
+
+.chotu-link{
+    color: #444 !important;
+    display: inline-block;
+    background: #eee;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%; 
+    font-size:13px;
+    margin:0px 10px
+}
+
+.chotu-link.add{
+	color:#fff !important;
+	background: #4caf50 ;
+}
+
+.chotu-link.view{
+	color:#fff !important;
+	background: #00b0ff ;
 }
 
 .card .card-header .card-header-title{
@@ -26,6 +58,14 @@ body{
 	text-transform: uppercase;
 	
 }
+
+.modal{
+	width:80%;
+}
+.modal-content{
+	padding:10px 20px !important;
+}
+
 .card-action .fa{
 	margin-right:10px;
 }
@@ -65,6 +105,7 @@ body{
 	line-height:20px;
 	color:#666;
 	display:inline-block;
+	margin:0px;
 }
 
 .home-card-thin	span.number{
@@ -233,18 +274,9 @@ color: #fff;
 }
 
 
-.tabs {
-	
-}
-.tabs .tab a {
-	color:#666;
-}
-.tabs .tab a:hover, .tabs .tab a.active {
-	COLOR:#03a9f4 !important
-}
 
 .indicator{
-	background-color:#03a9f4 !important
+	height:4px !important
 }
 
 
@@ -298,9 +330,7 @@ color: #fff;
 }
 
 .add-btn{
-	float:right;
 	width:100px;
-	margin:10px;
 	display:block;
 	text-align: center;
 	font-size:18px;
@@ -334,25 +364,133 @@ color: #fff;
 }
 
 
+.icon-title{
+	color:#fff;font-size:14px;position: absolute;bottom:5px;left:0px;text-align: center;width:100%;
+}
+
+.worklist-action-item{
+	position: relative;
+	height: 100px;
+	background: #0369c1 url('img/icons/worklist-action.png') no-repeat
+		center 10px;
+	background-size: 50px;
+	margin: 10px 0px;
+}
+
+.worklist-info-item{
+	
+	position: relative;
+	height: 100px;
+	background:  #277b8a url('img/icons/worklist-notification.png') no-repeat
+		center 10px;
+	background-size: 50px;
+	margin: 10px 0px;
+	
+
+}
+
+.worklist-chat-item{
+	
+	position: relative;
+	height: 100px;
+	background: #09b166 url('img/icons/chat2.png') no-repeat
+		center 10px;
+	background-size: 50px;
+	margin: 10px 0px;
+	
+
+}
+
+.worklist-fav-item{
+	
+		position: relative;
+	height: 100px;
+	background: #ff6464 url('img/icons/star-yellow.png') no-repeat
+		center 10px;
+	background-size: 50px;
+	margin: 10px 0px;
+	
+}
+
+
 
 .icon-config-stage{
 	margin:auto;border-radius:50%;height:100px;width:100px; background:#fff url('img/icons/tools-and-utensils.png') no-repeat center center;background-size: 60%;
+	
+	border: 6px solid #ccc;
+	border-top:6px solid #ff6d00;
+	
+	   -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg); /* Standard syntax */
+	
 }
 
 .icon-price-stage{
 	margin:auto;border-radius:50%;height:100px;width:100px; background:#fff url('img/icons/price-tag.png') no-repeat center center;background-size: 60%;
+
+border: 6px solid #ccc;
+	border-top:6px solid #ffc400;
+	border-right:6px solid #ffc400;
+	
+	   -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg); /* Standard syntax */
 }
 
 .icon-quote-stage{
 	margin:auto;border-radius:50%;height:100px;width:100px; background:#fff url('img/icons/diploma.png') no-repeat center center;background-size: 60%;
+	
+	border: 6px solid #ccc;
+	
+	border-top:6px solid #4caf50;
+	border-right:6px solid #4caf50;
+	border-bottom:6px solid #4caf50;
+	
+	   -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Safari */
+    transform: rotate(45deg); /* Standard syntax */
 }
 
+.worklist-bubble
+{
+    position: absolute;
+    background: #ff9100 ;
+    height: 35px;
+    line-height: 35px;
+    padding: 0px 5px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    top: -10px;
+    right: -10px;
+}
+
+
+
+/*
+
+
+#########################################
+
+
+MOBILE ONLY BLOCK
+
+
+
+
+#########################################
+
+
+*/
 @media screen and (max-width:600px) {
 
+	
+	
 	.home-card-pipeline-stage{
 text-align:left;	
 	height:80px;
-box-shadow: 0px 1px 0px #ffe189;
+box-shadow: 0px 1px 0px #ececec;
 	}
 	
 	
@@ -364,6 +502,26 @@ height: 50px;
 width: 50px;
 
 }
+
+
+.icon-config-stage{
+	border: 3px solid #ccc;
+	border-top:3px solid #ff6d00;
+}
+
+.icon-price-stage{
+	border: 3px solid #ccc;
+	border-top:3px solid #ffc400;
+	border-right:3px solid #ffc400;
+}
+
+.icon-quote-stage{
+	border: 3px solid #ccc;
+	border-top:3px solid #4caf50;
+	border-right:3px solid #4caf50;
+	border-bottom:3px solid #4caf50;
+}
+
 .home-card-pipeline-stage h6{
 	display: inline-block !important;
 line-height: 50px !important;
@@ -385,6 +543,24 @@ float:right;
 display: inline-block;
 float: right;
 margin-right: 10px;
+}
+
+
+.worklist-action-item,.worklist-info-item,.worklist-chat-item,.worklist-fav-item{
+	height:70px;
+	background-position: center center;
+	background-size:auto 60%;
+}
+
+.icon-title{
+	display:none;
+}
+
+.mobile-block
+{
+    display: block !important;
+    width: 100% !important;
+    margin: 5px 0px !important;
 }
 
 }

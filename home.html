@@ -23,7 +23,7 @@
 <script src="resources/js/materialize.min.js"></script>
 <script src="resources/js/pouchdb-6.2.0.min.js"></script>
 <script src="resources/js/owl.carousel.min.js"></script>
-
+<script src="resources/js/jquery.validate.min.js"></script>
 <!-- App JS -->
 <script src="resources/js/app-init.js"></script>
 
@@ -39,7 +39,7 @@
         <li class="active"><a href="home.html"><i class="fa fa-home left"></i> Home</a></li>
         <li><a href="worklist.html"><i class="fa fa-list left"></i>Worklist</a></lir>
         <li><a href="products.html"><i class="fa fa-shopping-basket left"></i>Products</a></li>        
-        <li><a href="chat.html"><i class="fa fa-comments left"></i>Chat</a></li>
+        <li><a href="contacts.html"><i class="fa fa-address-book left"></i>Contacts</a></li>
         <li><a href="my-favorites.html"><i class="fa fa-star left"></i>Favorites</a></li>
       </ul>
 
@@ -47,7 +47,7 @@
         <li class="active"><a href="home.html"><i class="fa fa-home left"></i> Home</a></li>
         <li><a href="worklist.html"><i class="fa fa-list left"></i>Worklist</a></lir>
         <li><a href="products.html"><i class="fa fa-shopping-basket left"></i>Products</a></li>        
-        <li><a href="chat.html"><i class="fa fa-comments left"></i>Chat</a></li>
+        <li><a href="contacts.html"><i class="fa fa-address-book left"></i>Contacts</a></li>
         <li><a href="my-favorites.html"><i class="fa fa-star left"></i>Favorites</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
@@ -57,25 +57,88 @@
 
 <div class="container">
 
+<div class="row" style="">
+
+
+ <div class="col s3 m3">
+ <a href="worklist.html">
+ <div  class="worklist-action-item" >
+ <div class="icon-title" style="" >WORKLIST</div>
+ <div class="worklist-bubble">100</div>
+</div>
+</a>
+            
+        </div>
+
+
+        
+       <div class="col s3 m3">
+       
+       
+        <a href="worklist.html">
+<div  class="worklist-info-item" >
+	             
+	<div class="icon-title" style="" >NOTIFICATIONS</div>
+</div>
+</a>
+       
+
+       
+       
+       
+        </div>
+
+   
+       <div class="col s3 m3">
+       
+       
+       <a href="contacts.html">
+ <div  class="worklist-chat-item" >
+ <div class="icon-title" style="" >CHAT</div>
+</div>
+</a>
+       
+         
+  
+       
+        </div>
+
+ <div class="col s3 m3">
+ 
+    
+       <a href="my-favorites.html">
+ <div  class="worklist-fav-item" >
+ <div class="icon-title" style="" >FAVORITES</div>
+</div>
+</a>
+ 
+   
+ 
+        </div>
+
+
+</div>
+
 <div class="row">
-
-
-
-
 
 <div class="col s12">
  <div class="card home-card">
-  <div class="card-header">
- <span class="card-header-title">PIPELINE</span>
- <a class="context-menu-opener"><i class="fa  fa-ellipsis-v"></i></a>
- 
+  <div class="card-header light-blue lighten-4">
+  <img src="resources/css/img/icons/pipes.png" style="height:20px;width:auto;vertical-align: middle;margin-right:10px;" />
+ <span class="card-header-title" style="color:#3c515a;">PIPELINE</span>
+ <a href="#!" class="chotu-link view  pull-right"><i class="fa fa-list"></i></a>
+ <a href="#!" class="chotu-link add pull-right"><i class="fa fa-plus"></i></a>
+ 			
  </div>
 
- 	<div class="card-content amber lighten-4" style=";min-height:120px;">
+ 	<div class="card-content " style=";min-height:120px;border-top:1px solid #eaeaea;border-bottom:1px solid #eaeaea;">
 
 
 
 <div class="row">
+
+
+ 
 
 
 
@@ -118,11 +181,7 @@
 
 						</div>
  	
- 	<div class="card-action blue-link"> 		
- 		<a href="#!"><i class="fa fa-plus"></i>EXPRESS QUOTE</a>
- 		<a href="#!"><i class="fa fa-list"></i>VIEW</a>
- 		
- 	</div>
+   
  </div>
  </div>
 
@@ -136,10 +195,10 @@
           <h6>INQUIRIES</h6>
           	<span class="number">100</span>
         </div>
-        <div class="card-action blue-link">
- 		<a href="#!"><i class="fa fa-plus"></i>NEW</a>
- 		<a href="#!"><i class="fa fa-list"></i>VIEW</a>
- 		<a class="context-menu-opener"><i class="fa  fa-ellipsis-v"></i></a>
+       <div class="card-action-home" style="">
+ 		<a href="#new-inquiry-form-modal" class="chotu-link add"><i class="fa fa-plus"></i></a>
+ 		<a href="#!" class="chotu-link view"><i class="fa fa-list"></i></a>		
+ 		
  	</div>
       </div>
     </div>
@@ -147,18 +206,18 @@
 
 <div class="col s12 m6">    
     <div class="card home-card-thin horizontal">
-      <div class="card-image" style="    background: #6b92a5;">
-        <img src="resources/css/img/icons/idea.png" style="height:80px;width:80px;margin:10px;">
+      <div class="card-image" style="    background: #e1e1e1;">
+        <img src="resources/css/img/icons/phone-book.png" style="height:80px;width:80px;margin:10px;">
       </div>
       <div class="card-stacked">
         <div class="card-content">
-          <h6>OPPORTUNITIES</h6>
+          <h6>CONTACTS</h6>
           	<span class="number">100</span>
         </div>
-        <div class="card-action blue-link">
- 		<a href="#!"><i class="fa fa-plus"></i>NEW</a>
- 		<a href="#!"><i class="fa fa-list"></i>VIEW</a>
- 		<a class="context-menu-opener"><i class="fa  fa-ellipsis-v"></i></a>
+       <div class="card-action-home" style="">
+       <a href="#contact-form-modal" class="chotu-link add"><i class="fa fa-plus"></i></a>
+ 		<a href="contacts.html" class="chotu-link view"><i class="fa fa-list"></i></a>		
+ 		
  	</div>
       </div>
     </div>
@@ -174,10 +233,10 @@
           <h6>PRODUCTS</h6>
           	<span class="number">100</span>
         </div>
-        <div class="card-action blue-link">
- 		<a href="#!"><i class="fa fa-plus"></i>NEW</a>
- 		<a href="#!"><i class="fa fa-list"></i>VIEW</a>
- 		<a class="context-menu-opener"><i class="fa  fa-ellipsis-v"></i></a>
+        <div class="card-action-home" style="">
+ 		<a href="#product-request-form-modal" class="chotu-link add"><i class="fa fa-plus"></i></a>
+ 		<a href="#!" class="chotu-link view"><i class="fa fa-list"></i></a>		
+ 		
  	</div>
       </div>
     </div>
@@ -188,17 +247,20 @@
       <div class="card-image" style="    background: #4691c3;">
         <img src="resources/css/img/icons/vendor.png" style="height:80px;width:80px;margin:10px;">
       </div>
-      <div class="card-stacked">
-        <div class="card-content">
+             <div class="card-stacked">
+      <div class="card-content">
           <h6>VENDORS</h6>
           	<span class="number">100</span>
-        </div>
-        <div class="card-action blue-link">
- 		<a href="#!"><i class="fa fa-plus"></i>NEW</a>
- 		<a href="#!"><i class="fa fa-list"></i>VIEW</a>
- 		<a class="context-menu-opener"><i class="fa  fa-ellipsis-v"></i></a>
+          
+          </div>	
+          	<div class="card-action-home" style="">
+ 		<a href="#new-vendor-form-modal" class="chotu-link add"><i class="fa fa-plus"></i></a>
+ 		<a href="#!" class="chotu-link view"><i class="fa fa-list"></i></a>		
+ 		
  	</div>
       </div>
+        
+      
     </div>
   </div>
 
@@ -224,11 +286,324 @@
 
 <div id="include-html"></div>
 
+
+<div class="popups-container">
+
+<!--
+####################
+ INQUIRY MODAL
+##################
+  -->
+  
+  
+  
+<div id="new-inquiry-form-modal" class="modal modal-fixed-footer">
+
+<form class="formValidate" id="new-vendor-form" method="get" action=""  novalidate="novalidate">
+<div class="modal-content">
+<h5 class="header blue-text">New Inquiry</h5>
+<div class="row">
+<div class="input-field col s12">
+<label for="inquirytitle" class="">Title*</label>
+<input id="inquirytitle" name="inquirytitle" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12">
+<label class="">Description*</label>
+
+<textarea id="inquirydesc" name="inquirydesc" class="materialize-textarea"></textarea>
+
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+</div>
+<h6 class="header blue-text">Person Submitting Inquiry</h6>
+<div class="row">
+<div class="input-field col s12 m6">
+<label for="inquirycontactname" class="">Name*</label>
+<input id="inquirycontactname" name="inquirycontactname" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12 m6">
+<label for="inquirycontact-org" class="">Organization*</label>
+<input id="inquirycontact-org" name="inquirycontact-org" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12 m6">
+<label for="inquirycontact-mobile-phone" class="">Mobile Phone</label>
+<input id="inquirycontact-mobile-phone" name="inquirycontact-mobile-phone" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12 m6">
+<label for="inquirycontact-work-phone" class="">Work Phone</label>
+<input id="inquirycontact-work-phone" name="inquirycontact-work-phone" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12 m6">
+<label for="inquirycontact-work-email" class="">Work Email*</label>
+<input id="inquirycontact-work-email" name="inquirycontact-work-email" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+
+</div>
+
+    </div>
+    
+    <div class="modal-footer">
+
+ <a   id="contact-creation-btn-cancel" class="waves-effect waves-light  pull-right  modal-close btn-flat">CANCEL</a>
+<button  type="submit" id="new-inquiry-btn" class="waves-effect waves-light btn blue pull-right " style="margin-right:20px;">SAVE</button>
+      
+      
+    </div>
+    </form>
+</div>
+
+<!--
+####################
+ VENDOR MODAL
+##################
+  -->
+
+
+<div id="new-vendor-form-modal" class="modal modal-fixed-footer">
+
+<form class="formValidate" id="new-vendor-form" method="get" action=""  novalidate="novalidate">
+<div class="modal-content">
+<h5 class="header blue-text">New Vendor</h5>
+<div class="row">
+<div class="input-field col s12 m6">
+<label for="new-vendor-name" class="">Vendor Name*</label>
+<input id="new-vendor-name" name="new-vendor-name" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+<div class="input-field col s12 m6">
+<label for="vendor-phone-number" class="">Phone Number*</label>
+<input id="vendor-phone-number" name="vendor-phone-number" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+<div class="input-field col s12">
+<label class="">Address*</label>
+
+<textarea id="vendor-address" name="vendor-address" class="materialize-textarea"></textarea>
+
+<div class="errorTxt">&nbsp;</div>
+</div>
+</div>
+
+    </div>
+    
+    <div class="modal-footer">
+
+ <a   id="contact-creation-btn-cancel" class="waves-effect waves-light  pull-right  modal-close btn-flat">CANCEL</a>
+<button  type="submit" id="new-vendor-btn" class="waves-effect waves-light btn blue pull-right " style="margin-right:20px;">SAVE</button>
+      
+      
+    </div>
+    </form>
+</div>
+
+
+<!--
+####################
+ PRODUCT REQUEST MODAL
+##################
+  -->
+
+
+
+<div id="product-request-form-modal" class="modal modal-fixed-footer">
+
+<form class="formValidate" id="product-request-form" method="get" action=""  novalidate="novalidate">
+<div class="modal-content">
+<h5 class="header blue-text">New Product Request</h5>
+<div class="row">
+<div class="input-field col s12">
+<label for="product-request-title" class="">Title*</label>
+<input id="product-request-title" name="product-request-title" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12 m6">
+<label for="product-request-product-type" class="">Product Type</label>
+<br />
+<select id="product-request-product-type">
+      <option value="" disabled selected>Choose your option</option>
+      <option>Product</option>
+      <option>Service</option>
+      <option>Bundle</option>
+    </select>
+
+</div>
+
+<div class="input-field col s12 m6">
+<label for="product-request-product-subtype" class="">Reason</label>
+<br />
+<select id="product-request-product-subtype">
+      <option value="" disabled selected>Choose your option</option>
+      <option>Product Not Available</option>
+      <option>Customer Inquiry</option>
+      <option>Unsure about product</option>
+    </select>
+
+</div>
+
+<div class="input-field col s12">
+<label for="product-request-desc" class="">Description*</label>
+<textarea id="product-request-desc" name="product-request-desc" class="materialize-textarea"></textarea>
+<div class="errorTxt">&nbsp;</div>
+</div>
+</div>
+</div>
+
+<div class="modal-footer">
+
+ <a   id="contact-creation-btn-cancel" class="waves-effect waves-light  pull-right  modal-close btn-flat">CANCEL</a>
+<button  type="submit" id="product-creation-btn" class="waves-effect waves-light btn blue pull-right " style="margin-right:20px;">SAVE</button>
+      
+      
+    </div>
+    </form>
+</div>
+
+<!--
+####################
+ CONTACT FROM MODAL
+##################
+  -->
+
+
+<div id="contact-form-modal" class="modal modal-fixed-footer">
+    
+
+<form class="formValidate" id="contact-form" method="get" action=""  novalidate="novalidate">
+<div class="modal-content">
+<h5 class="header blue-text">New Contact</h5>
+<div class="row">
+
+<div class="input-field col s12 m6">
+<label for="contactname" class="">Name*</label>
+<input id="contactname" name="contactname" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12 m6">
+<label for="contact-org" class="">Organization</label>
+<input id="contact-org" name="contact-org" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12 m6">
+<label for="contact-title" class="">Title</label>
+<input id="contact-title" name="contact-title" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12 m6">
+<label for="contact-mobile-phone" class="">Mobile Phone</label>
+<input id="contact-mobile-phone" name="contact-mobile-phone" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+<div class="input-field col s12 m6">
+<label for="contact-work-phone" class="">Work Phone</label>
+<input id="contact-work-phone" name="contact-work-phone" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+
+<div class="input-field col s12 m6">
+<label for="contact-work-email" class="">Work Email</label>
+<input id="contact-work-email" name="contact-work-email" type="text" >
+<div class="errorTxt">&nbsp;</div>
+</div>
+
+</div>
+
+
+
+
+</div>
+
+<div class="modal-footer">
+      
+      <a   id="contact-creation-btn-cancel" class="waves-effect waves-light  pull-right  modal-close btn-flat">CANCEL</a>
+<button  type="submit" id="contact-creation-btn" class="waves-effect waves-light btn blue pull-right " style="margin-right:20px;">SAVE</button>
+      
+      
+    </div>
+    </form>
+
+</div>
+
+
 <script type="text/javascript">
+
+
 
 $(document).ready(function(){
 	
 	
+	var validationResult=  $('#contact-form').validate({
+		rules:{
+			contactname:{
+				required: true,
+	            minlength: 5
+			}
+		},
+		 messages: {
+			 contactname:{
+	             required: "Enter a username",
+	             minlength: "Enter at least 5 characters"
+	         },
+	     },
+	     errorElement : 'div',
+	     errorPlacement: function(error, element) {
+	       var placement = $(element).next();
+	       if (placement) {
+	    	   $(placement).empty();
+	         $(placement).append(error)
+	       } else {
+	         error.insertAfter(element);
+	       }
+	     }
+	});
+	
+	
+	$('#contact-form').submit(function(){
+		if(validationResult.valid()){
+			alert("Make Call !");
+		}
+		
+		return false;
+	});
+
+	
+	
+})
+
+
+</script>
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+
+	$('select').material_select();
+	$('.modal').modal();
 	
 	
 	
