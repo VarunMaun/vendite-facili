@@ -467,6 +467,112 @@ border: 6px solid #ccc;
 }
 
 
+.table-of-contents{
+	overflow:auto;
+}
+
+.table-of-contents li {
+    padding: 2px 0;
+    height: 20px;
+}
+
+
+
+.table-of-contents a {	
+	    font-size: 12px;
+    line-height: 14px;	
+}
+
+#contact-list-wrap .divider{
+	margin:20px;
+}
+
+
+#contact-list-wrap .contact-card{
+	display:block;
+	padding:10px;	
+	border:1px solid #f1f1f1;
+	background: #fff;
+	font-size:12px;
+	line-height:25px;
+	color:#666 !important;	
+}
+
+#contact-list-wrap > a{
+color:#666 !important;
+}
+
+
+#contact-list-wrap .contact-card .contact-card-img{
+	display:inline-block;
+	height:25px;
+	width:25px;	
+	margin-right:10px;
+	text-align: center;    
+    background: #333 url(img/icons/light-blue-account.png);
+    background-size: 100%;
+    background-position: center;
+    vertical-align:middle;
+   
+}
+
+#contact-list-wrap .contact-card .contact-card-img.blue{
+	background: #333 url(img/icons/light-blue-account.png);
+	background-size: 100%;
+    background-position: center;
+	 background-color: transparent !important;
+}
+
+#contact-list-wrap .contact-card .contact-card-img.teal{
+	background: #333 url(img/icons/teal-account.png);
+	background-size: 100%;
+    background-position: center;
+	 background-color: transparent !important;
+}
+
+#contact-list-wrap .contact-card .contact-card-img.amber{
+	background: #333 url(img/icons/amber-account.png);
+	background-size: 100%;
+    background-position: center;
+	 background-color: transparent !important;
+}
+#contact-list-wrap .contact-card .contact-card-img.purple{
+	background: #333 url(img/icons/purple-account.png);
+	background-size: 100%;
+    background-position: center;
+	 background-color: transparent !important;
+}
+#contact-list-wrap .contact-card .contact-card-img.orange{
+	background: #333 url(img/icons/orange-account.png);
+	background-size: 100%;
+    background-position: center;
+	 background-color: transparent !important;
+}
+#contact-list-wrap .contact-card .contact-card-img.green{
+	background: #333 url(img/icons/green-account.png);
+	background-size: 100%;
+    background-position: center;
+	 background-color: transparent !important;
+}
+#contact-list-wrap .contact-card .contact-card-img.crimson{
+	background: #333 url(img/icons/crimson-account.png);
+	background-size: 100%;
+    background-position: center;
+	 background-color: transparent !important;
+}
+
+
+
+.empty-list-message{
+    height: 200px;
+    width: 100%;
+    COLOR: #FFF;    
+    padding: 20px;
+    font-weight:bold;
+    background: #333 url(img/llama-pose2.jpg) no-repeat center center;
+    background-size: 100%;
+}
+
 
 /*
 

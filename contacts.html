@@ -24,12 +24,13 @@
 
 <!-- App JS -->
 <script src="resources/js/app-init.js"></script>
+<script src="resources/js/mockData.js"></script>
 
 
 </head>
 <body>
 
-
+<div class="">
  <nav class="light-blue" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="home.html" class="brand-logo"><img  src="resources/css/img/icons/logo.png"/></a>
@@ -41,6 +42,7 @@
         <li><a href="my-favorites.html"><i class="fa fa-star left"></i>Favorites</a></li>
       </ul>
       
+    
 
       <ul id="nav-mobile" class="side-nav">
       <li><a href="home.html"><i class="fa fa-home left"></i> Home</a></li>
@@ -51,58 +53,217 @@
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
       
-       
+  
+          
            
     </div>
-    
+        
+      
    
   </nav>
+</div>
 
 
 <div class="container">
 
 
-<div class="light-blue darken-3" style="margin-top:10px;">
-  <ul class="tabs tabs-transparent ">
-        <li class="tab"><a class="active"  href="#test1">CONTACTS</a></li>
-        <li class="tab"><a href="#test2">CHATS</a></li>
-        
+<div class="row">
+
+<div class="col s12 m9 l5">
+<h5>Contact List</h5>
+</div>
+<div class="col s12 m9 l5">
+
+  <form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i id="search-box-clear-btn" class="material-icons">close</i>
+        </div>
+      </form>
+
+</div>
+
+<div class="col s12 m9 l10 ">
+    
+    
+    <div id="contact-list-wrap" >
+    
+    
+    </div>
+    
+    <div class="empty-list-message" style="display:none;">
+    NOTHING TO SEE HERE FOLKS !
+    
+    </div>
+    
+    </div>
+    
+<div class="col s3 m3 l2 hide-on-small-only">
+<div class="table-of-contents-wrap">
+ <ul class="section table-of-contents" >
+       
       </ul>
-      </div>
-<div class="card" style="margin-top:0px;">
-
-<div class="card-content">
-
-
-
-
-
-
-
-<div class="row">   
-    <div id="test1" class="col s12">
-    <h5>Contact List</h5>
-    
-    <div style="height:400px;"></div>
-    
-    </div>
-    <div id="test2" class="col s12">
-    <h5>
-    Chats</h5>
-    <div style="height:400px;"></div>
-    </div>
-  </div>
 </div>
 
-
- </div>
-</div>
+</div>    
+    
+</div></div>
 
 <div id="include-html"></div>
 
 <script type="text/javascript">
 
+function getRandomColorClass(){
+	var colorList = ['blue','crimson','purple','amber','green','teal'];
+	
+	var randomIndex = Math.round( Math.random()*colorList.length);
+	
+	if(randomIndex==colorList.length){
+		randomIndex = colorList.length -1;
+	}
+	
+	return colorList[randomIndex] + ' ';
+	
+}
+
+
 $(document).ready(function(){
+	
+	$('#contact-list-wrap').empty();
+	
+	var cList = contactList;
+	
+	cList.sort(function(a, b){
+	    var keyA =a["first_name"] ,
+	        keyB = b["first_name"];
+	    if(keyA < keyB) return -1;
+	    if(keyA > keyB) return 1;
+	    return 0;
+	});
+	
+	
+	
+	var prevChar = '';
+	var completeMarkup = '';	
+	for(var iter=0;iter<cList.length;iter++){
+		
+		var o =cList[iter];
+		var markup = "";
+		
+		var currChar = o["first_name"].substring(0,1).toLowerCase();
+		if(currChar!=prevChar){
+			
+			if(prevChar!=""){
+				markup = markup+"</div><div class='divider' id='divider-"+prevChar+"'></div>";	
+			}
+			
+			
+			
+			markup = markup+ '<div class="scrollspy row" id="'+currChar+'"  ><div class="col s12"><h5 class="list-section-title">'+currChar.toUpperCase()+'</h5></div>';
+			prevChar=currChar;
+			
+		}
+		
+		markup = markup+'<a href="#!" data-ref-id="'+o["id"]+'"><div class="contact-card  col s12 m6 l4">';
+			
+		
+		markup = markup + "<div class='contact-card-img "+getRandomColorClass()+"'></div>" +   o["Title"] +"&nbsp;" +o["first_name"]  +"&nbsp;" + o["last_name"]
+		markup = markup  + '</div></a>';
+		completeMarkup  = completeMarkup + markup;
+		
+		
+		
+		}
+	
+	if(cList.length>0){
+		completeMarkup = completeMarkup + "</div>";
+	}
+	
+	$('#contact-list-wrap').append(completeMarkup);;
+	
+	for(var iter=0;iter<26;iter++){
+		var c = String.fromCharCode(65+iter);
+		
+		$('.table-of-contents').append('<li><a href="#'+c.toLowerCase()+'">'+c+'</a></li>');
+	}
+	
+	
+	$('.scrollspy').scrollSpy();
+	
+
+	
+	
+	$('.table-of-contents').pushpin({
+	      top: 40,	      
+	      offset: 0
+	    });
+	 
+	 
+	
+	/*Adding search*/
+	
+	var filterData = function(){
+		var textToMatch=$('#search').val().trim().toUpperCase();
+		if(textToMatch==''){
+			//Show All
+			$('.contact-card').show();
+			$('.contact-card').attr('data-hidden','false');
+		}
+		else{
+			$('.contact-card').each(function(){
+				$t = $(this);
+				if($t.html().toUpperCase().indexOf(textToMatch) > -1){
+					$t.attr('data-hidden','false');
+					$t.show();
+				}
+				else{
+					$t.attr('data-hidden','true');
+					$t.hide();
+				}
+			});
+		}
+		
+		$('#contact-list-wrap .row').each(function(){
+			$row = $(this);
+			
+			if($(this).find('.contact-card[data-hidden=false]').length >0){
+				$(this).show();
+				$(this).nextAll('.divider:first').show();				
+				$('.table-of-contents li a[href="#'+$row.attr('id')+'"]').parent().show(); 
+			}
+			else{				
+				$(this).hide();
+				$(this).nextAll('.divider:first').hide();
+				 $('.table-of-contents li a[href="#'+$row.attr("id")+'"]').parent().hide(); 
+			}
+		});
+		
+		
+		if($('.contact-card[data-hidden=false]').length ==0){
+			$('.empty-list-message').show();
+		}
+		else{
+			$('.empty-list-message').hide();
+		}
+		
+		
+		
+	}
+	
+	$('#search').on('keyup',function(e){
+		
+		filterData();
+	})
+	$('#search').val('');
+	filterData();
+	
+
+	$('#search-box-clear-btn').click(function(){
+		$('#search').val('');
+		filterData();
+	});
+	
 	$(".button-collapse").sideNav();
 	
 })
