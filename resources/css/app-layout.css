@@ -8,6 +8,14 @@ body{
 	background: #fafafa;
 }
 
+.container {
+    width: 90%;
+}
+
+#site-header-target{
+	background: #2196F3 !important;
+	height:64px;
+}
 
 .row{
 	margin-bottom:5px !important;
@@ -16,6 +24,39 @@ body{
 h1, h2, h3, h4, h5, h6 {
 	color:#555;
 }
+
+nav a{
+	font-size:14px !important;
+	
+}
+
+i.left{
+	margin-right:10px !important;
+}
+
+i.right{
+	margin-left:10px !important;
+}
+
+.site-nav a,.site-nav a i{
+	line-height:40px !important;
+	height:40px !important;
+}
+
+.dropdown-content{
+	min-width:150px !important;
+}
+
+.dropdown-content a{
+	color:#555 !important;
+	padding:5px !important;
+	text-align:left;
+}
+
+nav ul a:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
 
 .card .card-header ,.card .card-action {
 	    padding: 10px !important;
@@ -121,12 +162,24 @@ h1, h2, h3, h4, h5, h6 {
 	max-height: 60% !important;
 }
 
-
-.brand-logo img{
-	height: 50px;
-    margin: 4px;	
+.brand-logo-left{
+	position: absolute;
+color: #fff;
+display: inline-block;
+padding: 0;
+white-space: nowrap;
 }
 
+
+.brand-logo-left img{
+	height: 40px;
+    margin: 4px;
+    margin-right:20px;	
+}
+
+.brand-logo-left{
+font-size:20px !important;	
+}
 
 #create-item-modal a{
 	display:block;
@@ -572,6 +625,37 @@ color:#666 !important;
     background: #333 url(img/llama-pose2.jpg) no-repeat center center;
     background-size: 100%;
 }
+
+
+
+#callPersonLink{
+display: inline-block;
+margin: 10px 10px;
+font-size: 20px;
+line-height: 40px;
+text-align: center;
+background: #09b166;
+color: #fff;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+margin-right:20px;
+}
+
+#emailPersonLink{
+	display: inline-block;
+margin: 10px 10px;
+font-size: 20px;
+line-height: 40px;
+text-align: center;
+background: #09b166;
+color: #fff;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+	background: #2196F3;
+}
+
 
 
 /*
