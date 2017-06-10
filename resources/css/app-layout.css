@@ -14,7 +14,7 @@ body{
 
 #site-header-target{
 	background: #2196F3 !important;
-	height:64px;
+	min-height:64px;
 }
 
 .row{
