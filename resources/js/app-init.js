@@ -3,7 +3,7 @@
 
 
 function loadCommonPage(page,$wrap){	
-	return	$.get(  'common/'+   page , '', function (data) {  
+	return	$.get(  'common/'+   page +'?r='+Math.random()  , '', function (data) {  
 			$wrap.append(data); });
 }
 

@@ -3,13 +3,16 @@
 <head>
 <title>Digital Enterprise Sales</title>
 
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="theme-color" content="#2196F3" />
+
 
 <!-- Library CSS -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
 <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
 <link href="resources/css/materialize.min.css" rel="stylesheet" />
 <link href="resources/css/style.css" rel="stylesheet" />
@@ -30,273 +33,441 @@
 </head>
 <body>
 
-<div id="site-header-target"></div>
+	<div id="site-header-target"></div>
 
 
-<div class="container" style="margin-bottom:100px;">
+	<div id="contact-details-modal" class="adaptive-modal modal "
+		style="background: #fff;">
+		<div style="position: relative; height: 100%; width: 100%;">
+			<div class="row header-row blue ">
+				<div class="col s12" Style="text-align: left;">
+					<!-- <span class="white-text title" style="margin-left:10px;margin-RIGHT:100px;">CONTACT DETAILS</span> -->
+					<a href="#!" class="right close"><i class="fa fa-close"></i></a>
+
+					<div style="margin-right: 50px;">
+						<ul class="tabs blue  white-text tabs-fixed-width2">
+							<li class="tab"><a class="active"
+								href="#contact-details-summary">OVERVIEW</a></li>
+							<li class="tab"><a href="#contact-details-conversations">CONVERSATIONS</a></li>
+							<li class="tab "><a href="#contact-details-quotes">INVOLVED
+									IN</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div
+				style="position: absolute; top: 50px; left: 0px; right: 0px; bottom: 0px;">
+				<div id="contact-details-summary" class=""
+					style="height: 100%; width: 100%; position: relative;">
+
+					<div class="adaptive-modal-content-scollable">
+						<h5 class="header" style="">Contact Details</h5>
+						<table class="key-val-table">
+							<tbody>
+								<tr>
+									<th><span class="list-label">Title</span></th>
+									<td><span class="list-val">Mr</span></td>
+								</tr>
+								<tr>
+									<th><span class="list-label">First Name</span></th>
+									<td><span class="list-val">Varun</span></td>
+								</tr>
+								<tr>
+									<th><span class="list-label">Last Name</span></th>
+									<td><span class="list-val">Maun</span></td>
+								</tr>
+								<tr>
+									<th><span class="list-label">Gender</span></th>
+									<td><span class="list-val">Male</span></td>
+								</tr>
+								<tr>
+									<th><span class="list-label">Age</span></th>
+									<td><span class="list-val">27</span></td>
+								</tr>
+								<tr>
+									<th><span class="list-label">Work Email</span></th>
+									<td><a class="list-val">varun.maun@tcs.com</a></td>
+								</tr>
+								<tr>
+									<th><span class="list-label">Work Phone</span></th>
+									<td><a class="list-val">vartialos@gmail.com</a></td>
+								</tr>
+								<tr>
+									<th><span class="list-label">Mobile</span></th>
+									<td><a class="list-val">8866442214</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="adaptive-modal-content-fixed">
+						<div style="text-align: center;">
+							<a href="tel:+918866442214" id="callPersonLink"><i
+								class="fa fa-phone"></i></a> <a
+								href="mailto:vartialos@gmail.com?SUbject=Hello"
+								id="emailPersonLink"><i class="fa fa-envelope"></i></a>
+						</div>
+					</div>
+				</div>
+				<div id="contact-details-conversations" class="purple"
+					style="height: 100%; width: 100%; position: relative;">
+					<div class="adaptive-modal-content-scollable chat-bkg" style="">
+						CHAts</div>
+					<div class="adaptive-modal-content-fixed">
+						<form>
+							<div class="row">
+								<div class="col s8">
+									<input type="text" placeholder="Enter" />
+								</div>
+								<div class="col s4">
+									<input type="button" value="submit" />
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div id="contact-details-quotes" class=" indigo"
+					style="height: 100%; width: 100%; position: relative;">
+					<h3 class="white-text">Quote List</h3>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-<div class="row">
 
-<div class="col s12 m12 l7">
-<h5>Contact List</h5>
-</div>
-<div class="col s12 m12 l5">
-
-  <form>
-        <div class="input-field">
-          <input id="search" type="search" required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i id="search-box-clear-btn" class="material-icons">close</i>
-        </div>
-      </form>
-
-</div>
-</div>
-<div class="row">
-<div class="col s2 m2 l1 ">
-<div class="table-of-contents-wrap">
- <ul class="section table-of-contents" style="padding-top:0px;" >
-       
-      </ul>
-</div>
-
-</div>    
+	<div class="container" style="margin-bottom: 100px;">
 
 
-<div class="col s10 m10 l11 ">
-    
-    
-    <div id="contact-list-wrap" >
-    
-    
-    </div>
-    
-    <div class="empty-list-message" style="display:none;">
-    NOTHING TO SEE HERE FOLKS !
-    
-    </div>
-    
-    </div>
-    
-    
-    
-</div></div>
+		<div class="row">
+
+			<div class="col s12 m12 l7">
+				<h5 class="header">CONTACTS</h5>
+			</div>
+			<div class="col s12 m12 l5">
+
+				<form>
+					<div class="input-field">
+						<input id="search" type="search" placeholder="Search" required>
+						<label class="label-icon" for="search"><i
+							class="material-icons">search</i></label> <i id="search-box-clear-btn"
+							class="material-icons">close</i>
+					</div>
+				</form>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s2 m2 l1 ">
+				<div class="table-of-contents-wrap">
+					<ul class="section table-of-contents" style="padding-top: 0px;">
+
+					</ul>
+				</div>
+
+			</div>
 
 
-<div id="content-details-pushpin" style="display:none;height:60px;background: #444;position:fixed;bottom:0px;left:0px;right:0px;">
-
-<a href="#!" class="close right white-text" style="display:inline-block;margin:0px 10px;font-size:30px;" ><i class="fa fa-close"></i></a>
-
-<div style="text-align:center;">
-
-<a href="tel:+918866442214" id="callPersonLink" ><i class="fa fa-phone"></i></a>
-
-<a href="mailto:vartialos@gmail.com?SUbject=Hello" id="emailPersonLink" ><i class="fa fa-envelope"></i></a>
-
-</div>
-
-</div>
+			<div class="col s10 m10 l11 ">
 
 
-<div id="include-html"></div>
+				<div id="contact-list-wrap"></div>
 
-<script type="text/javascript">
+				<div class="empty-list-message" style="display: none;">
+					NOTHING TO SEE HERE FOLKS !</div>
 
-function getRandomColorClass(){
-	var colorList = ['blue','crimson','purple','amber','green','teal'];
-	
-	var randomIndex = Math.round( Math.random()*colorList.length);
-	
-	if(randomIndex==colorList.length){
-		randomIndex = colorList.length -1;
-	}
-	
-	return colorList[randomIndex] + ' ';
-	
-}
+			</div>
 
 
-$(document).ready(function(){
-	
-	$.when( loadCommonPage('site-header.html',$('#site-header-target')) ).then(function(){
-		$('select').material_select();
-		$('.modal').modal();
-		$('.dropdown-button').dropdown();
-		
-		
-		  $(".button-collapse").sideNav();
-		
-	
-	
-	
-	$('#contact-list-wrap').empty();
-	
-	var cList = contactList;
-	
-	cList.sort(function(a, b){
-	    var keyA =a["first_name"] ,
-	        keyB = b["first_name"];
-	    if(keyA < keyB) return -1;
-	    if(keyA > keyB) return 1;
-	    return 0;
-	});
-	
-	
-	
-	var prevChar = '';
-	var completeMarkup = '';	
-	for(var iter=0;iter<cList.length;iter++){
-		
-		var o =cList[iter];
-		var markup = "";
-		
-		var currChar = o["first_name"].substring(0,1).toLowerCase();
-		if(currChar!=prevChar){
-			
-			if(prevChar!=""){
-				markup = markup+"</div><div class='divider' id='divider-"+prevChar+"'></div>";	
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	<div id="include-html"></div>
+
+	<script type="text/javascript">
+		function getRandomColorClass() {
+			var colorList = [ 'blue', 'crimson', 'purple', 'amber', 'green',
+					'teal' ];
+
+			var randomIndex = Math.round(Math.random() * colorList.length);
+
+			if (randomIndex == colorList.length) {
+				randomIndex = colorList.length - 1;
 			}
-			
-			
-			
-			markup = markup+ '<div class="scrollspy row" id="'+currChar+'"  ><div class="col s12"><h5 class="list-section-title">'+currChar.toUpperCase()+'</h5></div>';
-			prevChar=currChar;
-			
-		}
-		
-		markup = markup+'<a class="contact-details-link" href="#!" data-ref-id="'+o["id"]+'"><div class="contact-card  col s12 m6 l4">';
-			
-		
-		markup = markup + "<div class='contact-card-img "+getRandomColorClass()+"'></div>" +   o["Title"] +"&nbsp;" +o["first_name"]  +"&nbsp;" + o["last_name"]
-		markup = markup  + '</div></a>';
-		completeMarkup  = completeMarkup + markup;
-		
-		
-		
-		}
-	
-	if(cList.length>0){
-		completeMarkup = completeMarkup + "</div>";
-	}
-	
-	$('#contact-list-wrap').append(completeMarkup);;
-	
-	
-	$('a.contact-details-link').click(function(){
-		$('#content-details-pushpin').show();
-	});
-	
-	
-	
-	for(var iter=0;iter<26;iter++){
-		var c = String.fromCharCode(65+iter);
-		
-		$('.table-of-contents').append('<li><a href="#'+c.toLowerCase()+'">'+c+'</a></li>');
-	}
-	
-	
-	$('.scrollspy').scrollSpy();
-	
 
-	
-	
-	$('.table-of-contents').pushpin({
-	      top: 40,	      
-	      offset: 0
-	    });
-	 
-	 
-	
-	/*Adding search*/
-	
-	var filterData = function(){
-		var textToMatch=$('#search').val().trim().toUpperCase();
-		if(textToMatch==''){
-			//Show All
-			$('.contact-card').show();
-			$('.contact-card').attr('data-hidden','false');
-		}
-		else{
-			$('.contact-card').each(function(){
-				$t = $(this);
-				if($t.html().toUpperCase().indexOf(textToMatch) > -1){
-					$t.attr('data-hidden','false');
-					$t.show();
-				}
-				else{
-					$t.attr('data-hidden','true');
-					$t.hide();
-				}
-			});
-		}
-		
-		$('#contact-list-wrap .row').each(function(){
-			$row = $(this);
-			
-			if($(this).find('.contact-card[data-hidden=false]').length >0){
-				$(this).show();
-				$(this).nextAll('.divider:first').show();				
-				$('.table-of-contents li a[href="#'+$row.attr('id')+'"]').parent().show(); 
-			}
-			else{				
-				$(this).hide();
-				$(this).nextAll('.divider:first').hide();
-				 $('.table-of-contents li a[href="#'+$row.attr("id")+'"]').parent().hide(); 
-			}
-		});
-		
-		
-		if($('.contact-card[data-hidden=false]').length ==0){
-			$('.empty-list-message').show();
-		}
-		else{
-			$('.empty-list-message').hide();
-		}
-		
-		
-		
-	}
-	
-	$('#search').on('keyup',function(e){
-		
-		filterData();
-	})
-	$('#search').val('');
-	filterData();
-	
+			return colorList[randomIndex] + ' ';
 
-	$('#search-box-clear-btn').click(function(){
-		$('#search').val('');
-		filterData();
-	});
-	
-	
-	
-	
-	
-	$('#content-details-pushpin .close').click(function(){
-		$('#content-details-pushpin').hide();
-	})
-	
-	$('#content-details-pushpin').on('swiperight',function(){
-		$('#content-details-pushpin').hide();
-	})
-	
-	
-	
-	
-	
-	
-	
-	
-	
+		}
 
-	},function(){alert('Problem Loading Page')});
-	
-});
+		$(document)
+				.ready(
+						function() {
 
-</script>
+							$
+									.when(
+											loadCommonPage('site-header.html',
+													$('#site-header-target')))
+									.then(
+											function() {
+												$('select').material_select();
+												$('.modal').modal({
+													inDuration : 0,
+													outDuration : 0,
+												});
+												$('.dropdown-button')
+														.dropdown();
+												//$('ul.tabs').tabs({swipeable:true});
+
+												$(".button-collapse").sideNav();
+
+												$('#contact-list-wrap').empty();
+
+												var cList = contactList;
+
+												cList
+														.sort(function(a, b) {
+															var keyA = a["first_name"], keyB = b["first_name"];
+															if (keyA < keyB)
+																return -1;
+															if (keyA > keyB)
+																return 1;
+															return 0;
+														});
+
+												var prevChar = '';
+												var completeMarkup = '';
+												for (var iter = 0; iter < cList.length; iter++) {
+
+													var o = cList[iter];
+													var markup = "";
+
+													var currChar = o["first_name"]
+															.substring(0, 1)
+															.toLowerCase();
+													if (currChar != prevChar) {
+
+														if (prevChar != "") {
+															markup = markup
+																	+ "</div><div class='divider' id='divider-"+prevChar+"'></div>";
+														}
+
+														markup = markup
+																+ '<div class="scrollspy row" id="'+currChar+'"  ><div class="col s12"><h5 class="list-section-title">'
+																+ currChar
+																		.toUpperCase()
+																+ '</h5></div>';
+														prevChar = currChar;
+
+													}
+
+													markup = markup
+															+ '<a class="contact-details-link" href="#!" data-ref-id="'
+															+ o["id"]
+															+ '"><div class="contact-card  col s12 m6 l4">';
+
+													markup = markup
+															+ "<div class='contact-card-img "
+															+ getRandomColorClass()
+															+ "'></div>"
+															+ o["Title"]
+															+ "&nbsp;"
+															+ o["first_name"]
+															+ "&nbsp;"
+															+ o["last_name"]
+													markup = markup
+															+ '</div></a>';
+													completeMarkup = completeMarkup
+															+ markup;
+
+												}
+
+												if (cList.length > 0) {
+													completeMarkup = completeMarkup
+															+ "</div>";
+												}
+
+												$('#contact-list-wrap').append(
+														completeMarkup);
+												;
+
+												$('a.contact-details-link')
+														.click(
+																function() {
+																	$(
+																			'#contact-details-modal')
+																			.modal(
+																					'open');
+																	$('ul.tabs')
+																			.tabs();
+																});
+
+												for (var iter = 0; iter < 26; iter++) {
+													var c = String
+															.fromCharCode(65 + iter);
+
+													$('.table-of-contents')
+															.append(
+																	'<li><a href="#'
+																			+ c
+																					.toLowerCase()
+																			+ '">'
+																			+ c
+																			+ '</a></li>');
+												}
+
+												$('.scrollspy').scrollSpy();
+
+												$('.table-of-contents')
+														.pushpin(
+																{
+																	top : $(
+																			'.table-of-contents')
+																			.position().top,
+																	offset : 0
+																});
+
+												/*Adding search*/
+
+												var filterData = function() {
+													var textToMatch = $(
+															'#search').val()
+															.trim()
+															.toUpperCase();
+													if (textToMatch == '') {
+														//Show All
+														$('.contact-card')
+																.show();
+														$('.contact-card')
+																.attr(
+																		'data-hidden',
+																		'false');
+													} else {
+														$('.contact-card')
+																.each(
+																		function() {
+																			$t = $(this);
+																			if ($t
+																					.html()
+																					.toUpperCase()
+																					.indexOf(
+																							textToMatch) > -1) {
+																				$t
+																						.attr(
+																								'data-hidden',
+																								'false');
+																				$t
+																						.show();
+																			} else {
+																				$t
+																						.attr(
+																								'data-hidden',
+																								'true');
+																				$t
+																						.hide();
+																			}
+																		});
+													}
+
+													$('#contact-list-wrap .row')
+															.each(
+																	function() {
+																		$row = $(this);
+
+																		if ($(
+																				this)
+																				.find(
+																						'.contact-card[data-hidden=false]').length > 0) {
+																			$(
+																					this)
+																					.show();
+																			$(
+																					this)
+																					.nextAll(
+																							'.divider:first')
+																					.show();
+																			$(
+																					'.table-of-contents li a[href="#'
+																							+ $row
+																									.attr('id')
+																							+ '"]')
+																					.parent()
+																					.show();
+																		} else {
+																			$(
+																					this)
+																					.hide();
+																			$(
+																					this)
+																					.nextAll(
+																							'.divider:first')
+																					.hide();
+																			$(
+																					'.table-of-contents li a[href="#'
+																							+ $row
+																									.attr("id")
+																							+ '"]')
+																					.parent()
+																					.hide();
+																		}
+																	});
+
+													if ($('.contact-card[data-hidden=false]').length == 0) {
+														$('.empty-list-message')
+																.show();
+													} else {
+														$('.empty-list-message')
+																.hide();
+													}
+
+												}
+
+												$('#search').on('keyup',
+														function(e) {
+
+															filterData();
+														})
+												$('#search').val('');
+												filterData();
+
+												$('#search-box-clear-btn')
+														.click(
+																function() {
+																	$('#search')
+																			.val(
+																					'');
+																	filterData();
+																});
+
+												$('#contact-details-modal')
+														.modal('close');
+
+												$(
+														'#contact-details-modal .header-row a.close')
+														.click(
+																function() {
+																	$(
+																			'#contact-details-modal')
+																			.modal(
+																					'close');
+																});
+
+											}, function() {
+												alert('Problem Loading Page')
+											});
+
+						});
+	</script>
 
 
 </body>

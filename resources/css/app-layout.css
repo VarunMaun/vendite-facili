@@ -12,6 +12,15 @@ body{
     width: 90%;
 }
 
+
+.input-field input[type="search"] ~ .mdi-navigation-close, .input-field input[type="search"] ~ .material-icons{
+	top:8px;
+}
+
+.input-field input[type="search"]{
+	font-size:14px;
+}
+
 #site-header-target{
 	background: #2196F3 !important;
 	min-height:64px;
@@ -661,6 +670,94 @@ border-radius: 50%;
 }
 
 
+.modal.adaptive-modal{
+height:90% !important;
+max-height:90% !important;
+width:90% !important;
+top:5% !important;
+}
+
+.adaptive-modal .tabs a{
+	font-size:12px !important;
+}
+
+.adaptive-modal .row.header-row{
+	margin-bottom:0px !important;
+}
+
+.adaptive-modal .title,.adaptive-modal .close{
+	color:#fff !important;
+	line-height:48px;
+	font-size:14px !important;
+	font-weight:bold;
+}
+
+.adaptive-modal-content-scollable{
+	position:absolute;
+	top:0px;
+	left:0px;
+	right:0px;
+	bottom:60px;
+	overflow: auto;
+	padding:10px 20px;
+}
+
+.adaptive-modal-content-fixed{
+	background:#f1f1f1;
+	position:absolute;
+	height:60px;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	overflow: auto;
+}
+
+.tabs.white-text .tab a:hover, .tabs.white-text .tab a.active{
+font-weight: bold;	
+	}
+
+.tabs.white-text .tab a, .tabs.white-text .tab a:hover, .tabs.white-text .tab a.active{
+	color:#fff !important;
+}
+
+.tabs.white-text .indicator{
+	background-color: #fff !important;
+}
+
+
+.chat-bkg{
+	background: #E3DCD2 url('img/chat-bkg.jpg');
+}
+
+
+#contact-details-modal .header-row a.close{
+	font-size: 18px !important;
+height: 36px;
+padding: 0px 9px;
+margin-top: 7px;
+line-height: 36px;
+}
+
+
+table.key-val-table th{
+	background: #f1f1f1;
+	color:#333;
+	font-weight:bold;
+	text-align: left;
+	border:1px solid #e1e1e1;
+}
+
+table.key-val-table td{
+	background: #fff;
+	color:#333;
+	text-align: left;
+	border:1px solid #e1e1e1;
+}
+
+
+
+
+
 
 /*
 
@@ -762,9 +859,22 @@ margin-right: 10px;
 	text-align: center;
 }
 
-.site-nav.center i.fa{
+
+.dropdown-content.site-nav.center li  a  i.fa{
+	margin:0px 10px !important;
+}
+
+.site-nav.center >li  > a  i.fa{
 float:none !important;
 margin-right:0px !important;
 	}
+
+.modal.adaptive-modal{
+height:100% !important;
+max-height:100% !important;
+width:100% !important;
+top:0% !important;
+}
+
 
 }

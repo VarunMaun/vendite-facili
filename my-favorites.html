@@ -3,10 +3,12 @@
 <head>
 <title>Digital Enterprise Sales</title>
 
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="theme-color" content="#2196F3" />
+
 
 <!-- Library CSS -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -31,31 +33,10 @@
 
 
 
+<div id="site-header-target"></div>
 
 
-
- <nav class="light-blue"role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="home.html" class="brand-logo"><img  src="resources/css/img/icons/logo.png"/></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="home.html"><i class="fa fa-home left"></i> Home</a></li>
-        <li><a href="worklist.html"><i class="fa fa-list left"></i>Worklist</a></lir>
-        <li><a href="products.html"><i class="fa fa-shopping-basket left"></i>Products</a></li>        
-        <li><a href="contacts.html"><i class="fa fa-address-book left"></i>Contacts</a></li>
-        <li class="active"><a href="my-favorites.html"><i class="fa fa-star left"></i>Favorites</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="home.html"><i class="fa fa-home left"></i> Home</a></li>
-        <li><a href="worklist.html"><i class="fa fa-list left"></i>Worklist</a></lir>
-        <li><a href="products.html"><i class="fa fa-shopping-basket left"></i>Products</a></li>        
-        <li><a href="contacts.html"><i class="fa fa-address-book left"></i>Contacts</a></li>
-        <li class="active"><a href="my-favorites.html"><i class="fa fa-star left"></i>Favorites</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
+ 
 
 <div class="container">
 
@@ -104,7 +85,17 @@
 <script type="text/javascript">
 
 $(document).ready(function(){
-	$(".button-collapse").sideNav();
+	
+	$.when( loadCommonPage('site-header.html',$('#site-header-target')) ).then(function(){
+		$('select').material_select();
+		$('.modal').modal();
+		$('.dropdown-button').dropdown();
+		
+		
+		  $(".button-collapse").sideNav();
+		
+	
+	},function(){alert('Problem Loading Page')});
 	
 })
 
