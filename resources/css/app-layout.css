@@ -43,6 +43,10 @@ i.right{
 	height:40px !important;
 }
 
+.site-nav a i.fa{
+font-size: 18px;
+}
+
 .dropdown-content{
 	min-width:150px !important;
 }
@@ -752,5 +756,15 @@ margin-right: 10px;
     width: 100% !important;
     margin: 5px 0px !important;
 }
+
+.site-nav.center > li{
+	width:20%;
+	text-align: center;
+}
+
+.site-nav.center i.fa{
+float:none !important;
+margin-right:0px !important;
+	}
 
 }
