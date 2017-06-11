@@ -396,13 +396,15 @@ color: #fff;
 }
 
 .add-btn{
-	width:100px;
-	display:block;
-	text-align: center;
-	font-size:18px;
-	line-height:24px;	
-	border:2px solid rgb(0,176,80);;
-	position:relative;
+width: 70px;
+display: block;
+font-size: 12px;
+line-height: 24px;
+border: 2px solid rgb(0,176,80);
+position: relative;
+padding-left: 10px;
+cursor: pointer;
+margin:auto;
 }
 
 .add-btn.unselected{
@@ -755,7 +757,184 @@ table.key-val-table td{
 }
 
 
+.select-wrapper input.select-dropdown{
+	border-bottom:none !important;
+	color:blue;
+	margin:0px !important;
+	font-size: 12px;
+text-transform: uppercase;
+}
 
+.no-box-collapse ul{
+	box-shadow: none !important;
+}
+
+.no-box-collapse ul,.no-box-collapse li,.no-box-collapse div{
+	border:none !important;
+	font-size:12px;
+	color:#666;
+	margin:0px;
+	padding:2px !important;
+	padding-right:0px !important;
+	padding-left: 4px !important;
+}
+
+.no-box-collapse .collapsible-header{
+	min-height:20px;
+	line-height:20px;
+	position:relative;
+}
+
+
+.no-box-collapse .collapsible-header:after{
+	content:'+';
+	position: absolute;
+	top:0px;
+	right:5px;
+	font-size:20px;
+	display:block;
+	width:20px;
+	text-align: center;
+}
+
+.no-box-collapse .collapsible-header.active:after{
+	content:'-';
+	position: absolute;
+	top:0px;
+	right:5px;
+	font-size:20px;
+		width:20px;
+	text-align: center;
+}
+
+.no-box-collapse .collapsible-header.active{
+	color:blue;
+}
+
+.no-box-collapse .collapsible-body{
+	padding:0px;
+	padding-left:5px;
+	padding: 0px;
+padding-left: 10px;
+border-left: 1px solid #bfbfbf !important;
+margin-left: 10px;
+}
+
+
+.no-box-collapse > ul{
+	padding-left:0px !important;
+}
+
+h6.chotu-title{
+	text-transform: uppercase;
+	font-weight:bold;
+	font-size:10px;
+}
+
+
+
+.chotu-table th,.chotu-table td{
+	
+	padding: 5px 5px;
+display: table-cell;
+text-align: left;
+vertical-align: middle;
+border-radius: 2px;
+font-size: 12px;
+color: #666;
+text-align: center;
+}
+
+
+.chotu-table th{
+	font-size:10px;
+}
+
+.product-icon{
+	height:30px;
+	width:30px;
+	border:1px solid #999;
+	border-radius:50%;
+	line-height:30px;
+	text-align: center;
+	color:#999;
+	margin:auto;
+	position: relative;
+}
+
+.product-icon.partner:before{
+	content: '\f2b5';
+color: #10d4aa;
+position: absolute;
+bottom: -6px;
+left: 12px;
+font-family: FontAwesome;
+display: block;
+background: rgba(255,255,255,0.5);
+height: 15px;
+width: 20px;
+line-height: 15px;
+text-align: center;
+font-weight: bold;
+}
+
+
+.chotu-list .collection-item{
+	height:60px;
+	padding:10px 15px;
+}
+
+.chotu-list .product-icon{
+	margin: 5px 0px;
+	float:left;
+	vertical-align: top;
+	margin-right:20px;
+}
+
+.chotu-list .list-title{
+	display:inline-block;
+	font-size:14px;
+	color:#333;
+}
+
+.chotu-list .list-price {
+padding-top:5px;	
+}
+
+.chotu-list .list-price i,.chotu-list .list-price span{
+	color:#888;
+	font-size:12px;
+	line-height:20px;
+	font-weight:normal;
+}
+
+
+.chotu-list .add-btn{
+	float:right;
+	margin-right:10px;
+	margin-top:10px;
+	text-align: center;
+}
+
+
+.product-filter-opener{
+	float:right;
+	display:block;
+	padding:3px 10px;
+	border:1px solid #666;
+	color:#666;
+	font-size:14px;
+	line-height: 18px;
+	margin-top:10px;
+}
+
+#product-filter-modal-close{
+	float:right;
+	color:#fff;
+	font-size:20px;
+	margin-top:10px;
+	color:#fff;
+}
 
 
 
@@ -876,5 +1055,8 @@ width:100% !important;
 top:0% !important;
 }
 
+.zero-margin-on-small{
+	margin:0px !important;
+}
 
 }
