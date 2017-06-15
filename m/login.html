@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MCPQ</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="theme-color" content="#A63B3D" />
+
+<!-- Library CSS -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+<link href="resources/css/materialize.min.css" rel="stylesheet" />
+<!-- App CSS -->
+<link href="resources/css/app-layout.css" rel="stylesheet" />
+
+<!-- Library JS -->
+<script src="resources/js/jquery-3.2.1.min.js"></script>
+<script src="resources/js/materialize.min.js"></script>
+<script src="resources/js/pouchdb-6.2.0.min.js"></script>
+<script src="resources/js/jquery.validate.min.js"></script>
+
+<!-- App JS -->
+<script src="resources/js/app-init.js"></script>
+
+
+</head>
+<body class=" white">
+
+	<div class="row login-header">
+		<div
+			style="">MCPQ</div>
+	</div>
+
+
+	<div class="row">
+
+
+
+		<form id="login-form" class="col s12">
+
+
+			<div class="row">
+				<div class="col s12">
+					<h5 class=" grey-text ">Login</h5>
+				</div>
+
+				<div class="input-field col s12">
+					<input id="login-id" type="text" class="validate" required=""
+						aria-required="true" tabindex="1"> <label for="login-id"
+						data-error='Invalid Username'>Login ID</label>
+				</div>
+			</div>
+
+			<div class="input-field col s12">
+				<input id="password" type="password" class="validate" required=""
+					aria-required="true" tabindex="2"> <label for="password"
+					data-error='Invalid Password'>Password</label>
+			</div>
+
+
+			<button type="submit" id="login-btn" tabindex="3"
+				class="waves-effect waves-light btn btn-large green accent-4 white-text col s12 "
+				style="margin-top: 100px;">Login</button>
+
+			<div class="input-field col s12 center-align">
+				<a class="deep-orange-text">Trouble Signing In ?</a>
+			</div>
+
+
+		</form>
+
+
+	</div>
+
+	<script type="text/javascript">
+
+var users
+
+function validateLogin(){
+	
+	
+	var userId  = $('#login-id').val().trim().toLowerCase();
+	var password = $('#password').val().trim().toLowerCase();
+	
+	
+	if(userId!='varun'){
+		$('#login-id').removeClass('valid').addClass('invalid');
+	}
+	else if(password!='mar@2015'){
+		$('#password').removeClass('valid').addClass('invalid');
+	}
+	else{
+		window.location.href = "index.html";
+	}
+	return false;
+}
+
+$(document).ready(function(){
+	
+	$('#login-form').submit(function(e){
+		return validateLogin();
+	});
+	
+})
+
+</script>
+
+
+</body>
+</html>

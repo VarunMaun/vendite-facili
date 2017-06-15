@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MCPQ</title>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="theme-color" content="#A63B3D" />
+
+<!-- Library CSS -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	rel="stylesheet">
+<link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+<link href="resources/css/materialize.min.css" rel="stylesheet" />
+<!-- App CSS -->
+<link href="resources/css/app-layout.css" rel="stylesheet" />
+
+<!-- Library JS -->
+<script src="resources/js/jquery-3.2.1.min.js"></script>
+<script src="resources/js/materialize.min.js"></script>
+<script src="resources/js/pouchdb-6.2.0.min.js"></script>
+<script src="resources/js/jquery.validate.min.js"></script>
+<script src="resources/js/Chart.bundle.min.js"></script>
+
+<!-- App JS -->
+<script src="resources/js/app-init.js"></script>
+
+
+</head>
+<body >
+
+	<div class="row site-header" >
+		<div
+			style="">MCPQ</div>
+	</div>
+
+
+	<div class="row">
+
+	<div class="col s6">
+	<h5>My Tasks</h5>
+	<br />
+	<div class="row">
+	<div class="col s6" style="text-align: left;">
+	<span style="color:#ff8a80;font-weight:bold;font-size: 10px;">OVERDUE</span><br/>
+	<span style="color:#ff8a80;font-size: 20px;">43</span>
+	</div>
+	<div class="col s6" style="text-align: left;">
+	<span style="color:#aaa;font-weight:bold;font-size: 10px;">PENDING</span><br/>
+	<span style="color:#aaa;font-size: 20px;">100</span>
+	</div>
+	</div>
+	</div>
+	
+	
+	<div class="col s6">	
+	<div style="position: relative;">
+	<div id="canvas-holder" style="width:100px;;margin:20px auto;">
+        <canvas id="chart-area" />        
+    </div>
+    <div class="home-completion-status">45%<div>Complete</div></div>
+    </div>
+	</div>
+	
+
+
+		
+	</div>
+	
+	<div class="divider"></div>
+
+	<table>
+	<thead>
+	<tr>
+	<td>STAGE</td>
+	<td>DEALS</td>
+	<td>EST. VALUE</td>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td>INQUIRY</td>
+	<td>4</td>
+	<td>N/A</td>
+	</tr>
+	<tr>
+	<td>SOLUTIONING</td>
+	<td>4</td>
+	<td>$100</td>
+	</tr>
+	<tr>
+	<td>PRICING</td>
+	<td>4</td>
+	<td>$100</td>
+	</tr>
+	<tr>
+	<td>CLOSED WON</td>
+	<td>4</td>
+	<td>$100</td>
+	</tr>
+	</tbody>
+	</table>
+
+
+	<script type="text/javascript">
+
+
+
+$(document).ready(function(){
+	
+	var config = {
+	        type: 'doughnut',
+	        data: {
+	            datasets: [{
+	                data: [
+	                  45,45,10,
+	                ],
+	                backgroundColor: [
+	                    '#1de9b6',	                    
+	                    '#ccc',
+	                    '#ff8a80',
+	                ],
+	                
+	            }],
+	            
+	        },
+	        options: {
+	            responsive: true,
+	            legend: {
+	            	display: false,
+	            },
+	            title: {
+	                display: false,
+	            },
+	            animation: {
+	                animateScale: true,
+	                animateRotate: true
+	            },
+	            tooltips:{
+	            	enabled:false,
+	            },
+	            cutoutPercentage:85
+	        }
+	    };
+
+	        var ctx = document.getElementById("chart-area").getContext("2d");
+	        window.myDoughnut = new Chart(ctx, config);
+	
+	
+})
+
+</script>
+
+
+</body>
+</html>
