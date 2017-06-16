@@ -15,7 +15,9 @@
 <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
 <link href="resources/css/materialize.min.css" rel="stylesheet" />
 <!-- App CSS -->
-<link href="resources/css/app-layout.css" rel="stylesheet" />
+<link href="resources/css/app-layout.css?ref=3" rel="stylesheet" />
+
+
 
 <!-- Library JS -->
 <script src="resources/js/jquery-3.2.1.min.js"></script>
@@ -29,7 +31,7 @@
 
 
 </head>
-<body >
+<body style="background: #ddd;">
 
 	<div class="row site-header" >
 		<div
@@ -37,72 +39,134 @@
 	</div>
 
 
-	<div class="row">
+	<div class="row white">
 
+	
 	<div class="col s6">
-	<h5>My Tasks</h5>
-	<br />
+	
+	<div style="position: relative;">
+	<div id="canvas-holder" style="width:120px;;margin:20px auto;">
+        <canvas id="task-chart-area" />        
+    </div>
+    <div class="home-completion-status">45%<div>Complete</div></div>
+    </div>
+	</div>
+	
+	<div class="col s6">
+	
+	<h5 class=" teal-text" style="margin:25px 0px;">MY TASKS</h5>
 	<div class="row">
 	<div class="col s6" style="text-align: left;">
 	<span style="color:#ff8a80;font-weight:bold;font-size: 10px;">OVERDUE</span><br/>
 	<span style="color:#ff8a80;font-size: 20px;">43</span>
 	</div>
+	
 	<div class="col s6" style="text-align: left;">
 	<span style="color:#aaa;font-weight:bold;font-size: 10px;">PENDING</span><br/>
 	<span style="color:#aaa;font-size: 20px;">100</span>
 	</div>
+	
 	</div>
+	
 	</div>
 	
 	
-	<div class="col s6">	
-	<div style="position: relative;">
-	<div id="canvas-holder" style="width:100px;;margin:20px auto;">
-        <canvas id="chart-area" />        
-    </div>
-    <div class="home-completion-status">45%<div>Complete</div></div>
-    </div>
-	</div>
+	
 	
 
 
 		
 	</div>
 	
-	<div class="divider"></div>
+	
+	<div class="row  " style="background: #7fc9b6	">
+	
+	<div class="col s12">
+	<h5 class=" white-text center-align" style="margin:0px;margin-top:20px;margin-bottom:20px;">PIPELINE</h5>
+	</div>
 
-	<table>
-	<thead>
-	<tr>
-	<td>STAGE</td>
-	<td>DEALS</td>
-	<td>EST. VALUE</td>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-	<td>INQUIRY</td>
-	<td>4</td>
-	<td>N/A</td>
-	</tr>
-	<tr>
-	<td>SOLUTIONING</td>
-	<td>4</td>
-	<td>$100</td>
-	</tr>
-	<tr>
-	<td>PRICING</td>
-	<td>4</td>
-	<td>$100</td>
-	</tr>
-	<tr>
-	<td>CLOSED WON</td>
-	<td>4</td>
-	<td>$100</td>
-	</tr>
-	</tbody>
-	</table>
+<div class="col s12">
 
+<table >
+<tr>
+<td class="home-pipleline-lbl">
+INQUIRY
+<span>(30)</span>
+</td>
+<td class="home-pipeline-box">
+<div class="box-triangle" style="width:90%;">$100</div>
+</td>
+</tr>
+<tr>
+<td class="home-pipleline-lbl">
+SOLUTIONING
+<span>(30)</span>
+</td>
+<td class="home-pipeline-box">
+<div style="width:70%;">$80</div>
+</td>
+</tr>
+
+<tr>
+<td class="home-pipleline-lbl">
+PRICING
+<span>(30)</span>
+</td>
+<td class="home-pipeline-box">
+<div style="width:50%;">$50</div>
+</td>
+</tr>
+
+<tr>
+<td class="home-pipleline-lbl">
+CLOSED WON
+<span>(30)</span>
+</td>
+<td class="home-pipeline-box">
+<div style="width:30%;">$20</div>
+</td>
+</tr>
+
+</table>
+<br />
+</div>
+
+	
+	
+	
+	
+	</div>
+	
+	
+	
+	
+	<div class="row white">
+	
+	<div class="col s12">
+	
+	<h5 class="center-align " style="margin:25px 0px;">CLOSED LOST ANALYSIS</h5>
+	
+	<div id="canvas-holder" style="width:40%;;margin:10px auto;">
+        <canvas id="closed-lost-chart-area" />        
+    </div>
+	
+	<ul class="legend-list" style="margin:20px 0px;">
+	<li><div style="background: #1de9b6"></div>Price</li>
+	<li><div style="background: #ccc"></div>No Budget</li>
+	<li><div style="background: #ff8a80"></div>No Solution </li>
+	<li><div style="background: #444"></div>Lost to Competitor</li>
+	<li><div style="background: purple"></div>Others</li>
+	</ul>
+
+	
+	</div>
+	
+	
+	
+	</div>
+	
+
+	
 
 	<script type="text/javascript">
 
@@ -110,7 +174,7 @@
 
 $(document).ready(function(){
 	
-	var config = {
+	var task_config = {
 	        type: 'doughnut',
 	        data: {
 	            datasets: [{
@@ -145,8 +209,57 @@ $(document).ready(function(){
 	        }
 	    };
 
-	        var ctx = document.getElementById("chart-area").getContext("2d");
-	        window.myDoughnut = new Chart(ctx, config);
+	        var task_ctx = document.getElementById("task-chart-area").getContext("2d");
+	        window.rask_chart = new Chart(task_ctx, task_config);
+	
+	        
+	        var closed_lost_config = {
+	    	        type: 'pie',
+	    	        data: {
+	    	            datasets: [{
+	    	                data: [
+	    	                  45,45,10,24,56
+	    	                ],
+	    	                backgroundColor: [
+	    	                    '#1de9b6',	                    
+	    	                    '#ccc',
+	    	                    '#ff8a80',
+	    	                    '#444',
+	    	                    'purple'
+	    	                ],
+	    	                
+	    	            }],
+	    	            labels: [
+	    	                "Price",
+	    	                "No Budget",
+	    	                "No Solution Available",
+	    	                "Lost to Competitor",	    	                
+	    	                "Others"
+	    	            ]
+	    	        },
+	    	        options: {
+	    	            responsive: true,
+	    	            legend: {
+	    	            	display: false,
+	    	            },
+	    	            title: {
+	    	                display: false,
+	    	            },
+	    	            animation: {
+	    	                animateScale: true,
+	    	                animateRotate: true
+	    	            },
+	    	            tooltips:{
+	    	            	enabled:false,
+	    	            },
+	    	        }
+	    	    };
+	        
+	        
+	        
+	        var closed_lost_ctx = document.getElementById("closed-lost-chart-area").getContext("2d");
+	        window.closed_lost_chart = new Chart(closed_lost_ctx, closed_lost_config);
+	        
 	
 	
 })

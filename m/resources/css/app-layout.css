@@ -101,12 +101,11 @@ canvas {
 
 .home-completion-status{
 	position: absolute;
-	top:24px;
-	
+	top:32px;
 	left:50%;
 	margin-left:-50px;
 	width:100px;
-	color:#0fa882;
+	color:#666;
 	font-size:18px;
 	font-weight: lighter;
 	text-align: center;
@@ -115,4 +114,79 @@ canvas {
 .home-completion-status >div{
 font-size:14px;
 }
+
+.home-pipleline-lbl,.home-pipeline-box{
+	padding:1px;
+}
+
+.home-pipleline-lbl{
+	text-align: right;
+	padding-right:20px;
+	border-right:1px solid rgba(50,50,50,0.1);
+	width:160px;
+	color:rgba(0,0,0,0.5);
+}
+
+.home-pipleline-lbl> span{
+	font-size:10px;
+}
+
+.home-pipeline-box > div{
+	background: #fff;
+	margin:0px auto;
+	height:35px;
+	text-align: center;
+	line-height:35px;
+	position: relative; 	
+}
+
+.home-pipeline-box > div::before{
+	content:'';
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:block;
+	 width: 0px; 
+  height: 0px;
+  border-top: 40px solid transparent;
+  border-bottom: 0px solid transparent;  
+  border-left:10px solid #7fc9b6;	
+}
+
+.home-pipeline-box > div::after{
+	content:'';
+	position:absolute;
+	top:0px;
+	right:0px;
+	display:block;
+	 width: 0px; 
+  height: 0px;
+  border-top: 40px solid transparent;
+  border-bottom: 0px solid transparent;  
+  border-right:10px solid #7fc9b6;	
+}
+
+.legend-list{
+	margin:0px auto;
+	padding:0px;
+	display:block;	
+}
+
+.legend-list > li{
+	list-style: none;
+	margin:0px;
+	padding:5px 0px;
+	color:#444;
+	display:inline-block;
+	width:49%;
+}
+
+.legend-list > li > div{
+	display:inline-block;
+	height:14px;
+	width:30px;
+	margin-right:15px;
+}
+
+
 
