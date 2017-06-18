@@ -1,0 +1,26 @@
+body{
+	background: #eaeaea;
+}
+
+header{
+	background: #fff;
+	border-bottom:1px solid #ddd;
+		
+}
+
+
+header .icon-wrap a {
+	color:#65c1bd;
+	font-weight:400;
+}
+
+
+header .l0-menu-wrap ul li a{
+color:#777;
+}
+
+header .l0-menu-wrap ul li a.active{
+color:#65c1bd;
+}
+
+
