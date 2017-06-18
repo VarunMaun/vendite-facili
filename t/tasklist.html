@@ -111,14 +111,14 @@
 
 			for (var iter = 0; iter < 6; iter++) {
 				var ob = pipelinedata[iter];
-				var tempMarkup = '<div class="opp-card"><a href="#!"><div class="title">'+ob["taskTitle"]+'</div><div class="target-date"><i class="fa fa-calendar"></i>'+ob["taskDate"]+'</div></a></div>'
+				var tempMarkup = '<div class="task-card pipeline-card"><a href="#!"><div class="title">'+ob["taskTitle"]+'</div><div class="target-date"><i class="fa fa-calendar"></i>'+ob["taskDate"]+'</div></a></div>'
 				p = p + tempMarkup;
 				c_p = c_p + 1;
 			}
 			
 			for (var iter = 0; iter < 20; iter++) {
 				var ob = leadData[iter];
-				var tempMarkup = '<div class="opp-card"><a href="#!"><div class="title">'+ob["name"]+'</div><div class="target-date"><i class="fa fa-phone"></i>'+ob["phone"]+'</div></a></div>'
+				var tempMarkup = '<div class="task-card lead-card"><a href="#!"><div class="title">' + ob["salute"]+ ' ' +ob["name"]+'</div><div class="target-date">'+ob["phone"]+'</div></a></div>'
 				l = l + tempMarkup;
 				c_l = c_l + 1;
 			}
@@ -126,7 +126,7 @@
 			
 			for (var iter = 0; iter < 4; iter++) {
 				var ob = appointmentData[iter];
-				var tempMarkup = '<div class="opp-card"><a href="#!"><div class="title">'+ob["appointmentTitle"]+'</div><div class="target-date"><i class="fa fa-calendar"></i>'+ob["appointmentDate"]+'</div></a></div>'
+				var tempMarkup = '<div class="task-card appointment-card"><a href="#!"><div class="title">'+ob["appointmentTitle"]+'</div><div class="target-date">'+ob["appointmentDate"]+'</div></a></div>'
 				a = a + tempMarkup;
 				c_a = c_a + 1;
 			}
