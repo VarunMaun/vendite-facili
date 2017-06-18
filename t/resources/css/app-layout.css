@@ -303,3 +303,8 @@ right: 0px;
 	border-top:4px solid #FF9200;
 	border-left:6px solid #E68503;
 }
+
+.pipeline-task-card,.lead-task-card,.appointment-task-card{
+	border-top:4px solid #76ff03;
+	border-left:6px solid #76ff03;
+}

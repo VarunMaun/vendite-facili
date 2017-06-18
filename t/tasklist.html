@@ -32,7 +32,9 @@
 
 <!-- App JS -->
 <script src="resources/js/app-init.js"></script>
-<script src="pipeline-data.js"></script>
+<script src="appointment-task-data.js"></script>
+<script src="opp-task-data.js"></script>
+<script src="leads-data.js"></script>
 
 
 </head>
@@ -57,7 +59,7 @@
 </div>
 <div class="owl-carousel owl-theme" style="">
 
-<div class="row card bello-list item offerability-card" style="">
+<div class="row card bello-list item pipeline-task-card" style="">
 <div class="bello-header top-orange ">
 <h6 class="">PIPELINE TASKS<span class="count"></span></h6>
 
@@ -69,7 +71,7 @@
 </div>
 </div>
 
-<div class="row card bello-list item solutioning-card" style="">
+<div class="row card bello-list item lead-task-card" style="">
 <div class="bello-header top-amber">
 <h6 class="">CONTACT LEADS<span class="count"></span></h6>
 </div>
@@ -78,7 +80,7 @@
 </div>
 </div>
 
-<div class="row card bello-list item proposal-card" style="">
+<div class="row card bello-list item appointment-task-card" style="">
 <div class="bello-header top-yellow">
 <h6 class="">APPOINTMENTS<span class="count"></span></h6>
 </div>
@@ -102,52 +104,42 @@
 
 
 
-		function loadDataInPipeline(data) {
+		function loadData(pipelinedata,leadData,appointmentData) {
 
-			var o = '', s = '', p = '', c = '';
-			var s_o=0,s_s=0,s_p=0,s_c=0;
-			var c_o=0,c_s=0,c_p=0,c_c=0;
+			var p = '', l = '', a = '';
+			var c_p=0,c_l=0,c_a=0;
 
+			for (var iter = 0; iter < 6; iter++) {
+				var ob = pipelinedata[iter];
+				var tempMarkup = '<div class="opp-card"><a href="#!"><div class="title">'+ob["taskTitle"]+'</div><div class="target-date"><i class="fa fa-calendar"></i>'+ob["taskDate"]+'</div></a></div>'
+				p = p + tempMarkup;
+				c_p = c_p + 1;
+			}
+			
 			for (var iter = 0; iter < 20; iter++) {
-				var ob = data[iter];
-
-				var tempMarkup = '<div class="opp-card"><a href="#!"><div class="title">'+ob["title"]+'</div><div class="price">$'+ob["price"]+'</div><div class="target-date"><i class="fa fa-calendar"></i>'+ob["closeDate"]+'</div></a></div>'
-				
-				
-				if (ob["stage"] == 1) {
-				o = o + tempMarkup;
-				s_o = s_o + ob["price"];
-				c_o = c_o + 1;
-				} else if (ob["stage"] == 2) {
-					s = s + tempMarkup;
-					s_s = s_s + ob["price"];
-					c_s = c_s + 1;
-				} else if (ob["stage"] == 3) {
-					p = p + tempMarkup;
-					s_p = s_p + ob["price"];
-					c_p = c_p + 1;
-				} else if (ob["stage"] == 4) {
-					c = c + tempMarkup;
-					s_c = s_c + ob["price"];
-					c_c = c_c + 1;
-				}
-
+				var ob = leadData[iter];
+				var tempMarkup = '<div class="opp-card"><a href="#!"><div class="title">'+ob["name"]+'</div><div class="target-date"><i class="fa fa-phone"></i>'+ob["phone"]+'</div></a></div>'
+				l = l + tempMarkup;
+				c_l = c_l + 1;
 			}
 			
 			
-			$('.offerability-card > .bello-header > h6 > span.count').html('(&nbsp;'+c_o+'&nbsp;)');
-			$('.solutioning-card > .bello-header > h6 > span.count').html('(&nbsp;'+c_s+'&nbsp;)');
-			$('.proposal-card  > .bello-header > h6 > span.count').html('(&nbsp;'+c_p+'&nbsp;)');
+			for (var iter = 0; iter < 4; iter++) {
+				var ob = appointmentData[iter];
+				var tempMarkup = '<div class="opp-card"><a href="#!"><div class="title">'+ob["appointmentTitle"]+'</div><div class="target-date"><i class="fa fa-calendar"></i>'+ob["appointmentDate"]+'</div></a></div>'
+				a = a + tempMarkup;
+				c_a = c_a + 1;
+			}
 			
 			
-			$('.offerability-card > .bello-header > .right').html('$'+  (Math.round(s_o * 100) / 100) );
-			$('.solutioning-card > .bello-header > .right').html('$'+  (Math.round(s_s * 100) / 100) );
-			$('.proposal-card > .bello-header > .right').html('$'+  (Math.round(s_p * 100) / 100) );
+			$('.pipeline-task-card > .bello-header > h6 > span.count').html('(&nbsp;'+c_p+'&nbsp;)');
+			$('.lead-task-card > .bello-header > h6 > span.count').html('(&nbsp;'+c_l+'&nbsp;)');
+			$('.appointment-task-card > .bello-header > h6 > span.count').html('(&nbsp;'+c_a+'&nbsp;)');
 			
 
-			$('.offerability-card > .bello-body').html(o);
-			$('.solutioning-card > .bello-body').html(s);
-			$('.proposal-card > .bello-body').html(p);
+			$('.pipeline-task-card > .bello-body').html(p);
+			$('.lead-task-card > .bello-body').html(l);
+			$('.appointment-task-card > .bello-body').html(a);
 
 		}
 
@@ -155,7 +147,7 @@
 				function() {
 
 					
-					loadDataInPipeline(pipelineSourceData);
+					loadData(oppTaskData,leadData,appointmentSourceData);
 					
 					
 					
